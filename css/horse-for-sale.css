@@ -1,0 +1,68 @@
+/* Parent container holding all horse cards */
+.horse-grid {
+    display: flex;
+    flex-wrap: wrap;  /* This ensures that if there's no space in one row, it moves to the next */
+    gap: 20px;        /* Adds space between each horse container */
+    justify-content: center; /* Align the containers horizontally in the center */
+}
+
+/* General styles for the container */
+.horse-details .container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background-color: #f9f9f9; /* Light background for content */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    margin-bottom: 20px;
+}
+
+/* Style for the horse image */
+.horse-details .horse-img {
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 20px;
+}
+
+/* Info Grid */
+.horse-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 20px; /* Space between columns */
+    margin-bottom: 20px;
+}
+
+.horse-info-grid .info-column p {
+    margin: 0;
+}
+
+/* Description section */
+.horse-description {
+    margin-top: 20px;
+}
+
+.horse-description h3 {
+    color: #228B22; /* Forest Green for headings */
+}
+
+.horse-description p {
+    line-height: 1.5;
+}
+
+/* Action buttons */
+.action-buttons {
+    margin-top: 30px;
+}
+
+.action-buttons .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.action-buttons .btn:hover {
+    background-color: #228B22;
+}

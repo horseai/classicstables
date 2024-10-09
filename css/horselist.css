@@ -1,0 +1,128 @@
+/* Horse list specific styles */
+body {
+   /* background: url('/home/localhost/hsi_ss_themes/classic/media/images/background.jpg') center/cover no-repeat;*/
+   /* background: url('/home/localhost/hsi_ss_themes/classic/media/images/background.jpg') ;*/
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+}
+
+.horses-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+/* Tab styles */
+.tab-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff80;
+    padding: 14px 20px;
+    border-radius: 12px;  /* Rounded corners for the container */
+    margin-bottom: 40px; /* Ensure space between tab and footer */
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    width: 100%;  /* Ensures the tabs fill the entire container */
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;  /* Rounded corners for the container */
+    overflow: hidden;  /* Ensure content stays within the borders */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.tab button {
+    /*background-color: #f1f1f1;*/
+    flex: 1;  /* Each button now takes equal width, filling the container */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    margin-right: 5px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 12px;  /* Rounded corners for the container */
+}
+
+.tab button.active {
+    background-color: #c09711;
+    color: white;
+}
+
+.tab button:hover {
+    background-color: #228B22;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* Horse styling */
+.horse {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.horse img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.horse-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.horse-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #228B22;
+}
+
+.horse-content p {
+    font-size: 16px;
+    color: #666;
+    flex-grow: 1;
+}
+
+.horse-content .btn {
+    background-color: #c09711;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    width: 100%;
+}
+.horse-content .btn:hover {
+    background-color: #228B22; /* Darken the button on hover */
+}
+
+
+@media (max-width: 768px) {
+    .horse {
+        flex-direction: column;
+    }
+
+    .horse img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
