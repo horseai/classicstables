@@ -1,1 +1,421 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #FFFFFF; /* Beige Background */
+  /* background-color: #F5F5DC; /* Beige Background */
+    /* background: url('/home/localhost/hsi_ss_themes/classic/media/images/background.jpg') center/cover no-repeat;*/
+    margin: 0;
+    padding: 0;
+}
+.placeholder {
+    height: 120px; /* Adjust the height as needed . Golden Colour - #c09711* silver - #c3c7c7 */
+   /* background-color: #c09711; 
+    /*background-color: transparent; /* No background color, just space */
+    width: 100%; /* Full width to maintain layout */
+}
+.placeholder-short{
+  height:25px;
+  background-color: #c09711;
+  width: 100%;
+  margin-bottom: 5px;
+}
+/*hero image container for the site wide hero image*/
+.hero-image-container {
+    width: 100%;
+    height: 60vh; /* 70% of the viewport height */
+    position: relative;
+    padding:0px;
+    overflow: hidden;
+    margin-top: 30px; /* Adjust if navigation height varies */
+    margin-bottom: 30px; /* Adjust if navigation height varies */
+ }
 
+/* Hero image */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* Text overlay */
+.hero-overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    font-size: 2.5rem;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.4); /* Slight background for readability */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: bold;
+}
+/*hero image container for site wide hero image */
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+   /*background-color: #8B451350; /* Brown */
+   background-color: #00000050;
+    color: #FFFFFF; /* White Text */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Distribute content: left & right */
+    align-items: center; /* Align items vertically */
+}
+.header-sitewide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #8B4513; /* Brown */
+  border-bottom: 10px #c09711 solid;
+ /*  background-color: #41424c; */
+  color: #FFFFFF; /* White Text */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Distribute content: left & right */
+  align-items: center; /* Align items vertically */
+}
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+header h1 {
+    margin: 0;
+}
+/* Add social media icon styles as before */
+.social-media {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    justify-content: flex-end; /* Align to the right */
+     padding-right: 20px; /* Add padding to the right to ensure no icons are cut off */
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+    .social-media img {
+        width: 24px;
+        height: 24px;
+    }
+}
+nav {
+    margin-top: 10px; /* Space between the header text and navigation */
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;  /* Makes navigation items inline */
+    list-style-type: none;  /* Remove bullet points */
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    margin-left: 20px; /* Space between navigation items */
+}
+
+nav a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #228B22; /* Forest Green */
+}
+
+/* Main content with centered layout */
+main {
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+}
+/* About Us Section Styling */
+.about-us {
+    /* max-width: 800px; Set a max width to center the content */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: left; /* Center the text */
+    background-color: #f9f9f9;  /*Optional background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle effect */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+}
+
+.about-us h2 {
+    font-size: 2rem; /* Make the title prominent */
+    margin-bottom: 20px; /* Space between title and paragraph */
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 1rem; /* Size for readability */
+    line-height: 1.6; /* Comfortable line spacing */
+    color: #333; /* Darker text for readability */
+}
+
+/* Featured Horses Hero Image */
+#our-stallions {
+    position: relative;
+    text-align: center;
+   /* background-color: black;  Set background to black */
+    color: white;
+ 
+    
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.8; /* Set the opacity to 70% */
+ /*   filter: brightness(0.6);  Further darkens the image */
+    height: 60vh; /* Responsive height */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;  /* Rounded corners for the container */
+     
+}
+
+#our-stallions .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay-text h1 {
+    font-size: 48px;
+    font-family: 'CorporateFont', sans-serif; /* Choose a good corporate font */
+    color: #fff;
+}
+
+.hero-image a {
+    display: block;
+    text-decoration: none;
+}
+
+.hero-image:hover .overlay-text {
+    color: inherit; /* Ensure it doesn't change color on hover */
+    background-color: transparent; /* No background change */
+}
+/*News And Updates */
+.news-section {
+   /* uncomment to fixed the width of news section , It will display 2 items a row.  
+   max-width: 1200px; 
+  background-color: #f9f9f9; Light background 
+   margin: 0 auto;     Center the section */
+   padding: 40px 20px;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #228B22; 
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 40px;
+}
+
+.news-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.news-item h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+/* Footer general styling */
+footer {
+    background-color: #8B4513; /* Brown */
+    color: #FFFFFF; /* White Text */
+   /* text-align: center; */
+    border-top:10px #c09711 solid;
+    padding: 20px;
+    position: relative;
+    margin: 0 auto; /* Center the section horizontally */
+    bottom: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+/* Full-width Brand Section */
+.footer-brand-fullwidth {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .footer-brand-fullwidth h2 {
+    font-size: 24px;
+    color: #ffffff; /* You can adjust the color */
+    text-transform: uppercase;
+  }
+  /* Footer Main Content (Left, Middle, Right Sections) */
+  .footer-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto; /* Center the section horizontally */
+    justify-content: center;
+    flex-wrap: wrap;    
+  }
+  
+  .footer-left,
+  .footer-middle {
+    width: 35%; /* Adjust the width to fit content nicely */
+    margin-bottom: 10px; /* Reduce the bottom margin */
+ }
+  
+  .footer-left ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-left ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    display: block;
+    margin-bottom:  5px;
+  }
+  
+  .footer-left ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-middle .location {
+    margin-bottom: 20px;
+  }
+  
+
+  .footer-middle h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+    
+  .footer-middle p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .footer-middle a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-middle a:hover {
+    text-decoration: underline;
+  }
+
+  /* Right Section - QR Code */
+.footer-right {
+    width: 20%;
+    text-align: center;
+  }
+  
+  .footer-right .qr-code img {
+    width: 100px; /* Adjust size of the QR code */
+    height: auto;
+  }
+
+  /* Footer Social Media Icons */
+.social-media-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-media-footer a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+  }
+  
+  .social-media-footer a:hover {
+    color: #007bff;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #FFFFFF;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+      width: 100%; /* Stack sections on top of each other */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .footer-bottom {
+      padding-top: 20px;
+    }
+    .footer-addresses {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .location-column {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  
+  
