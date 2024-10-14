@@ -1,12 +1,24 @@
 body {
     font-family: Arial, sans-serif;
     color: #333333;
-    background-color: #FFFFFF; /* Beige Background */
+   /* background-color: #FFFFFF; /* Beige Background */
   /* background-color: #F5F5DC; /* Beige Background */
-    /* background: url('/home/localhost/hsi_ss_themes/classic/media/images/background.jpg') center/cover no-repeat;*/
+    background: url('/media/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
+/* Fixing Horizontal Scrolling */
+header,main, nav, .carousel, footer {
+  width: 100%; /* Ensure these elements do not overflow the viewport */
+}
+* {
+  box-sizing: border-box; /* Includes padding and borders within width/height */
+}
+/* Fixing Horizontal Scrolling */
 .placeholder {
     height: 120px; /* Adjust the height as needed . Golden Colour - #c09711* silver - #c3c7c7 */
    /* background-color: #c09711; 
@@ -17,7 +29,8 @@ body {
   height:25px;
   background-color: #c09711;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
+  border-radius: 5px;
 }
 /*hero image container for the site wide hero image*/
 .hero-image-container {
@@ -27,6 +40,7 @@ body {
     padding:0px;
     overflow: hidden;
     margin-top: 30px; /* Adjust if navigation height varies */
+    justify-content: center; /* Horizontally center content */
     margin-bottom: 30px; /* Adjust if navigation height varies */
  }
 
@@ -40,15 +54,15 @@ body {
 /* Text overlay */
 .hero-overlay-text {
     position: absolute;
-    top: 80%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: left;
     font-size: 2.5rem;
     font-family: 'Arial', sans-serif;
     background-color: rgba(0, 0, 0, 0.4); /* Slight background for readability */
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
 }
 
@@ -56,22 +70,46 @@ h1 {
     margin: 0;
     font-weight: bold;
 }
+
+/* Hero image media breakpoints */
+/* Media Query for mobile devices (e.g., screens smaller than 768px) */
+@media (max-width: 768px) {
+  .hero-image {
+    width: 100vw; /* Full viewport height for mobile */
+    /* background-size: cover; Ensure image still covers entire area */
+    
+  }
+
+  .hero-overlay-text {
+    font-size: 1.5em; /* Adjust text size for better fit on mobile */
+    padding: 0.5em;
+    }
+}
+
+/* Additional media query for larger screens, if needed */
+@media (min-width: 769px) {
+  .hero-image {
+    width: 100%; /* Keep the height flexible for larger screens */
+  }
+}
+/*hero image media breakpoints*/
 /*hero image container for site wide hero image */
 
 header {
-    position: absolute;
+
+    position: absolute; /*fixing nav issue*/
     top: 0;
     width: 100%;
    /*background-color: #8B451350; /* Brown */
-   background-color: #00000050;
+    background-color: #00000050;
     color: #FFFFFF; /* White Text */
-    padding: 20px;
+    padding: 1em;
     display: flex;
     justify-content: space-between; /* Distribute content: left & right */
     align-items: center; /* Align items vertically */
 }
 .header-sitewide {
-  position: absolute;
+  position: absolute; 
   top: 0;
   width: 100%;
   background-color: #8B4513; /* Brown */
@@ -91,6 +129,7 @@ header {
 
 header h1 {
     margin: 0;
+    margin-right: 40px;
 }
 /* Add social media icon styles as before */
 .social-media {
@@ -110,36 +149,92 @@ header h1 {
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
-@media (max-width: 768px) {
-    .social-media img {
-        width: 24px;
-        height: 24px;
-    }
-}
 nav {
-    margin-top: 10px; /* Space between the header text and navigation */
-    display: flex;
-    align-items: center;
+  margin-top: 0.625em; /* 10px to em */
+  display: flex;
+  flex-wrap: wrap; /*nav issue fix*/
+  align-items: center;
+  width: auto; /* Remove any fixed width constraints */
+  flex-direction: column;
 }
 
 nav ul {
-    padding: 0;
-    display: flex;  /* Makes navigation items inline */
-    list-style-type: none;  /* Remove bullet points */
-    margin: 0;
+  padding: 0;
+  display: flex; /* Makes navigation items inline */
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
-    margin-left: 20px; /* Space between navigation items */
+  display: inline;
+  margin: 0 0.625em; /* 10px to em */
+  margin-left: 1.25em; /* 20px to em */
 }
 
 nav a {
-    color: #FFFFFF; /* White */
-    text-decoration: none;
+  color: #FFFFFF; /* White */
+  text-decoration: none;
+  display: block; /* Make links block-level elements */
+  width: 100%; /* Allow full width for each button */
+  float: none; /* Remove float */
+  clear: both; /* Clear floats */
 }
 
+/* Hide the hamburger menu by default */
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 2rem; /* Adjust size as needed */
+}
+/* Show hamburger menu only on mobile devices */
+  @media (max-width: 768px)
+   {
+    .hamburger {
+      display: block; /* Show hamburger icon on mobile */
+      }
+    .menu ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%; /* Full width for mobile */
+      position: absolute; /* Position the menu */
+      top: 60px; /* Adjust based on header height */
+      left: 0;
+      background: #00000090; /* Add background to avoid transparency issues */
+      z-index: 10; /* Ensure it appears above other elements */
+      overflow: hidden; /* Prevent overflow */
+      padding-top: 1em;
+    }
+  /* Show the menu when the hamburger is clicked */
+    nav.menu-open ul{
+      display: flex; /* Show the menu */
+      }
+    header nav li {
+      margin-bottom: .5em;
+      margin-top: .5em;
+    }
+  }
+  /* Desktop layout */
+@media (min-width: 769px) {
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav li {
+    margin-right: 2em;
+  }
+  .hamburger {
+    display: none; /* Hide hamburger on desktop */
+}
+}
+
+/* Tablet (min-width: 769px) */
+@media (min-width: 769px) {
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+}
 
 main {
     padding: 20px;
@@ -183,21 +278,18 @@ main {
     position: relative;
     text-align: center;
    /* background-color: black;  Set background to black */
-    color: white;
- 
-    
-}
+    color: #000000;
+ }
 
 .full-width-image {
     width: 100%;
     height: auto;
-    opacity: 0.8; /* Set the opacity to 70% */
- /*   filter: brightness(0.6);  Further darkens the image */
+    opacity: 0.9; /* Set the opacity to 70% */
+  filter: brightness(0.4); /* Further darkens the image */
     height: 60vh; /* Responsive height */
     object-fit: cover;
     object-position: center;
     border-radius: 12px;  /* Rounded corners for the container */
-     
 }
 
 #our-stallions .overlay-text {
@@ -205,15 +297,15 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
-    padding: 20px;
+   /* background-color: rgba(0, 0, 0, 0.2); /* Dark overlay for better text readability */
+    padding:5px 5px;
     border-radius: 10px;
 }
 
-.overlay-text h1 {
-    font-size: 48px;
+.overlay-text h2 {
+    font-size: 2.5em;
     font-family: 'CorporateFont', sans-serif; /* Choose a good corporate font */
-    color: #fff;
+    color: #f5f5dc;
 }
 
 .hero-image a {
@@ -223,7 +315,10 @@ main {
 
 .hero-image:hover .overlay-text {
     color: inherit; /* Ensure it doesn't change color on hover */
-    background-color: transparent; /* No background change */
+   /* background-color: transparent; /* No background change */
+    background-color: rgba(0, 0, 0, 0.2); /* Dark overlay for better text readability */
+    text-decoration: underline;
+    text-decoration-color: #f5f5dc;
 }
 /*News And Updates */
 .news-section {
@@ -416,6 +511,22 @@ footer {
         width: 100%;
         margin-bottom: 15px;
       }
+        .navigation {
+        display: flex; /* Enable flexbox */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        background-color: #fff; /* Optional: set a background */
+    }
+
+    .navigation a {
+        padding: 10px; /* Add some padding for clickable areas */
+        text-align: center; /* Center the text */
+        border-bottom: 1px solid #ccc; /* Optional: add a separator */
+    }
+    .social-media img {
+      width: 24px;
+      height: 24px;
+  }
     }
   
   

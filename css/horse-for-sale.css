@@ -4,11 +4,13 @@
     flex-wrap: wrap;  /* This ensures that if there's no space in one row, it moves to the next */
     gap: 20px;        /* Adds space between each horse container */
     justify-content: center; /* Align the containers horizontally in the center */
+    overflow: hidden; /* Prevents overflow */
 }
 
 /* General styles for the container */
 .horse-details .container {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px 20px;
     background-color: #f9f9f9; /* Light background for content */
@@ -22,6 +24,7 @@
     width: 100%;
     border-radius: 8px; /* Rounded corners for the image */
     margin-bottom: 20px;
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
 }
 
 /* Info Grid */
@@ -65,4 +68,19 @@
 
 .action-buttons .btn:hover {
     background-color: #228B22;
+}
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .horse-info-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+    
+    /* Ensure the grid does not overflow horizontally */
+    .horse-grid {
+        padding: 0 10px; /* Add padding to prevent it from touching the screen edges */
+    }
+
+    .horse-details .container {
+        width: 100%; /* Full width on mobile */
+    }
 }

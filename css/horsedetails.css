@@ -1,5 +1,5 @@
 /* Parent container holding all horse cards */
-body{
+body {
     background: url('/home/localhost/hsi_ss_themes/classic/media/images/background.jpg') center/cover no-repeat;
 }
 
@@ -8,11 +8,13 @@ body{
     flex-wrap: wrap;  /* This ensures that if there's no space in one row, it moves to the next */
     gap: 20px;        /* Adds space between each horse container */
     justify-content: center; /* Align the containers horizontally in the center */
+    overflow: hidden; /* Prevents overflow */
 }
 
 /* General styles for the container */
 .horse-details .container {
-    width: 1200px;
+    width:100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px;
     background-color: #f9f9f9; /* Light background for content */
@@ -80,6 +82,7 @@ h3 {
     grid-template-columns: repeat(4, 1fr); /* Four equal columns */
      /*gap: 10px; Space between columns */
    /* border: 1px solid red;  Temporary border to see grid boundaries */
+   
 } 
 
 
