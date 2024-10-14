@@ -13,10 +13,11 @@
    <section>
         <header class="header-sitewide">
             <h1>Classic Stables</h1>
-            <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <nav class="menu">
                 <ul>
-                    <li><a href="classic.html">Home</a></li>
-                    <li><a href="classic.html#about-us">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-us">About</a></li>
                     <li><a href="horselist.html">Horses</a></li>
                     <li><a href="horseforsale.html">HorseForSale</a></li>
                     <li><a href="#footer">Contact</a></li>
@@ -33,15 +34,7 @@
         </header>
     </section>
     <section class="placeholder"></section>
-    <section>
-             <div class="hero-image-container">
-            <img src="media/images/horse/hd1.png" alt="Horse List Hero Image" class="hero-image">
-            <div class="hero-overlay-text">
-                <h1>Our Stallions</h1>
-            </div>
-        </div>
-
-    </section>
+<!--Removed horselist hero image-->
     <!-- Tab Navigation -->
     <section class="tab-container">
         <div class="tab">
@@ -257,7 +250,7 @@
      <div class="footer-left">
        <h4>Quick Links</h4>
        <ul>
-        <li><a href="classic.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="horseforsale.html">Horse For Sale</a></li>
         <li><a href="horselist.html">Featured Horses</a></li>
        </br>
@@ -323,6 +316,16 @@
 
         // Show the Stallion tab by default
         document.getElementById("Stallion").style.display = "block";
+
+    //scripts related to hamburger
+              const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+          console.log('Hamburger clicked!'); // Check if this logs when you click
+        nav.classList.toggle('menu-open'); // Toggle the class to open/close the menu
+          });
+    //scripts related to hamburger
     </script>
 
 </body>

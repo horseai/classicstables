@@ -12,16 +12,17 @@
     <section class="carousel-container">
     <header>
         <h1>Classic Stables</h1>
-        <nav>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#index.html">Home</a></li>
                 <li><a href="#about-us">About</a></li>
                 <li><a href="horselist.html">Horses</a></li>
                 <li><a href="horseforsale.html">HorseForSale</a></li>
                 <li><a href="#footer">Contact</a></li>
             </ul>
           </nav>
-        <div class="header-content">
+          <div class="header-content">
           <div class="social-media">
               <!-- <a href="https://www.facebook.com" target="_blank"><img src="media/images/sm/fb.png" alt="Facebook"></a> 
                     <a href="https://www.twitter.com" target="_blank"><img src="media/images/sm/twt.png" alt="Twitter"></a>-->
@@ -72,7 +73,7 @@
           <p>
               Classic Stables is a premier racehorse breeding facility dedicated to excellence across Wales, England. 
               We proudly manage a collection of 25 elite broodmares and 10 exceptional stallions, with approximately 
-              20 foals born each year and 65 horses under training UK-wide. With locations in Cardiff, Newport, and Swansea, 
+              20 foals born each year and 65 horses under training UK-wide. With locations in Conwy, Cowbridge, Conwy, and Brecon, 
               our stables provide a nurturing environment that fosters the growth of exceptional racehorses.
           </p>
           <p>
@@ -88,7 +89,7 @@
           <div class="hero-image">
               <img src="media/images/horse/hd2.png" alt="Our Stallions" class="full-width-image">
               <div class="overlay-text">
-                  <h1>Our Stallions</h1>
+                  <h2>Our Featured Horses</h2>
               </div>
           </div>
       </a>
@@ -167,7 +168,7 @@
     <div class="footer-left">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="classic.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="horseforsale.html">Horse For Sale</a></li>
         <li><a href="horselist.html">Featured Horses</a></li>
       </br>
@@ -252,6 +253,17 @@
         
         // Start the autoplay when the page loads
         autoPlaySlides();
+    
+    
+      //scripts related to hamburger
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+          console.log('Hamburger clicked!'); // Check if this logs when you click
+        nav.classList.toggle('menu-open'); // Toggle the class to open/close the menu
+          });
+      //scripts related to hamburger
     </script>
 </body>
 </html>
