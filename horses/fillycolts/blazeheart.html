@@ -12,10 +12,11 @@
     <section>
         <header class="header-sitewide">
             <h1>Classic Stables</h1>
-            <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <nav class="menu">
                 <ul>
-                  <li><a href="../../classic.html">Home</a></li>
-                  <li><a href="../../classic.html#about-us">About</a></li>
+                  <li><a href="../../index.html">Home</a></li>
+                  <li><a href="../../index.html#about-us">About</a></li>
                   <li><a href="../../horselist.html">Horses</a></li>
                   <li><a href="../../horseforsale.html">HorseForSale</a></li>
                   <li><a href="#footer">Contact</a></li>
@@ -92,8 +93,9 @@
                         <tr><td>Stormcloud  </td></tr> <!-- Dam of Dam-->
                     </table>
                 </div>
+                <!-- Column 2: Two rows 
                 <div class="column">
-                    <table> <!-- Column 2: Two rows -->
+                    <table> 
                         <tr><td>Thunderbolt</td></tr>
                         <tr  class="table-row-border-dotted"><td>Misty Sky</td></tr>
                         <tr><td>Lightning</td></tr>
@@ -103,7 +105,7 @@
                         <tr><td>Whispering Wind</td></tr>
                         <tr><td> Foggy Night</td></tr>
                     </table>
-                </div>
+                </div>-->
             </div>
         </div>
        
@@ -115,7 +117,7 @@
 <!-- Full Profile Section -->
 <div class="profile-section">
     <div class="profile-text">
-        <p><a href="https://www.horseai.com/Blazeheart-profile" class="profile-link" target="_blank">Click here</a> to view Blazeheart's complete profile on <strong class="green-text">Horse AI</strong>.</br>(This section is for demonstration of connectivity with Horse AI Horse Profies)</p>
+        <p><a href="https://horseconnectpro.com/" class="profile-link" target="_blank">Click here</a> to view Blazeheart's complete profile on <strong class="green-text">Horse AI</strong>.</br>(This section is for demonstration of connectivity with Horse AI Horse Profies)</p>
     </div>
     <div class="qr-code">
         <img src="../../media/images/horse/stallion/royalheritage/qr.jpg" alt="QR Code to Blazeheart's profile">
@@ -162,7 +164,7 @@
      <div class="footer-left">
        <h4>Quick Links</h4>
        <ul>
-        <li><a href="../../classic.html">Home</a></li>
+        <li><a href="../../index.html">Home</a></li>
         <li><a href="../../horseforsale.html">Horse For Sale</a></li>
         <li><a href="../../horselist.html">Featured Horses</a></li>
       </br>
@@ -201,6 +203,14 @@
    </div>
  </footer>
 </section>
- <!--Footer-->
+<script>//scripts related to hamburger
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    console.log('Hamburger clicked!'); // Check if this logs when you click
+  nav.classList.toggle('menu-open'); // Toggle the class to open/close the menu
+    });
+//scripts related to hamburger</script>
 </body>
 </html>
